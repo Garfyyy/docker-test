@@ -5,3 +5,4 @@ RUN mv overleaf-cep/services/web/modules/track-changes services/web/modules/trac
 RUN rm -rf overleaf-cep
 RUN sed -i "/moduleImportSequence:/a 'track-changes'," services/web/config/settings.defaults.js
 RUN sed -i 's/trackChangesAvailable: false/trackChangesAvailable: true/g' services/web/app/src/Features/Project/ProjectEditorHandler.js
+RUN tlmgr install scheme-full
